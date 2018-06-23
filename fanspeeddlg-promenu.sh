@@ -1,4 +1,5 @@
 #!/bin/bash
+_my_dir='pwd'
 HEIGHT=18
 WIDTH=40
 CHOICE_HEIGHT=4
@@ -22,16 +23,16 @@ CHOICE=$(dialog --clear \
 clear
 case $CHOICE in
         1)
-            sh -c '~/Scripts/pro_fans/amdgpu-pro-fans/./amdgpu-pro-fans.sh -s 40'
+            sh -c '_my_dir./amdgpu-pro-fans.sh -s 40'
             ;;
 	2)
-            sh -c '~/Scripts/pro_fans/amdgpu-pro-fans/./amdgpu-pro-fans.sh -s 60'
+            sh -c '_my_dir./amdgpu-pro-fans.sh -s 60'
             ;;
 	3)
-            sh -c '~/Scripts/pro_fans/amdgpu-pro-fans/./amdgpu-pro-fans.sh -s 80'
+            sh -c '_my_dir./amdgpu-pro-fans.sh -s 80'
             ;;
 	4)
-            sh -c '~/Scripts/pro_fans/amdgpu-pro-fans/./amdgpu-pro-fans.sh -s 100'
+            sh -c '_my_dir./amdgpu-pro-fans.sh -s 100'
             ;;
 
 esac
