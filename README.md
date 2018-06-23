@@ -15,6 +15,7 @@ The current master branch is the stable release.
 * git clone https://github.com/sysdrum/amdgpu-pro-fans
 * cd amdgpu-pro-fans
 * Run ./create_desktop_file.sh
+* If you move amdgpu-pro-fans just Run the ./create_desktop_file again to update everything.
 
 
 ## Dependencies : 
