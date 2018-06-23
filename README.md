@@ -1,27 +1,34 @@
 # amdgpu-pro-fans
 
-Author: DominiLux
+
+Original creator DominiLux 
+Project extended: Sysdrum
 License: Apache Version 2.0
 
-This is an alpha release written in unix style bash script.  It is a simple utility that allows you to set the fan speeds for AMD cards that support use the AMD GPU PRO driver.  There are many features I will be adding to this over the coming days and weeks.
+This was an alpha release written in unix style bash script. It is a simple utility that allows you to set the fan speeds for AMD cards that support use the AMD GPU PRO driver. 
 
 ## Stable Branch
-The current master branch is considered the stable release.  The code in the development branch may not have been fully tested.
+The current master branch is the stable release. 
 
 ## Installation Instructions:
 * sudo apt-get install git
-* git clone https://github.com/dominilux/amdgpu-pro-fans
+* git clone https://github.com/sysdrum/amdgpu-pro-fans
 * cd amdgpu-pro-fans
-* chmod +x amdgpu-pro-fans.sh
+* Run ./create_desktop_file.sh
 
-## Usage:
-sudo ./amdgpu-pro-fans.sh -s [speed 0 - 100]
 
-## Usage Example:
-sudo ./amdgpu-pro-fans.sh s 80
-That would set all of your fan speeds to 80 percent of their maximum speed.  The argument works perfectly as of the current stable release.
+## Dependencies : 
+* dialog - is required to for the menu to work.
+
+## Adjusting the MENU Example:
+Menu has default settings of 40/60/80/100
+| ./amdgpu-pro-fans.sh -s 80 | 
+That would set all of your fan speeds to 80 percent of their maximum speed.
 
 ## Notes:
-Fully tested on Ubuntu 18.04 with AMDGPU-PRO proprietary linux drivers.  It is now compatible with all Radeon R8 Series, R9 Series, and RX Series graphics cards.  I will be adding the option to specify a specific adapter soon.
+Fully tested on Ubuntu 18.04 with AMDGPU-PRO proprietary linux drivers. It is compatible with all Radeon R8 Series, R9 Series, and RX Series graphics cards.
 
-This version defaults to all adapters.
+## Orignal project:
+https://github.com/DominiLux/amdgpu-pro-fans
+Dev replaced the project with:
+https://github.com/DominiLux/GPUMAGIC
