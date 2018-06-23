@@ -1,6 +1,4 @@
 #!/bin/bash
-mydir='pwd'
-cd ${mydir}
 HEIGHT=18
 WIDTH=40
 CHOICE_HEIGHT=4
@@ -24,16 +22,16 @@ CHOICE=$(dialog --clear \
 clear
 case $CHOICE in
         1)
-            sh -c './amdgpu-pro-fans.sh -s 40'
+            sh -c 'textexchange/./amdgpu-pro-fans.sh -s 40'
             ;;
 	2)
-            sh -c './amdgpu-pro-fans.sh -s 60'
+            sh -c 'textexchange./amdgpu-pro-fans.sh -s 60'
             ;;
 	3)
-            sh -c './amdgpu-pro-fans.sh -s 80'
+            sh -c 'textexchange./amdgpu-pro-fans.sh -s 80'
             ;;
 	4)
-            sh -c './amdgpu-pro-fans.sh -s 100'
+            sh -c 'textexchange./amdgpu-pro-fans.sh -s 100'
             ;;
 
 esac
