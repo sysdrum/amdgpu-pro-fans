@@ -19,5 +19,5 @@ EOS
 chmod +x AMDFCS.desktop
 ## This can be updated if this path is not valid. 
 cp -p AMDFCS.desktop ~/.local/share/applications
-sed -n "s|textexchange|${FULL_PATH}|g" fanspeeddlg-promenu.sh
+sed "s|textexchange|${FULL_PATH}|g" fanspeeddlg-promenu.sh
 chmod +x fanspeeddlg-promenu.sh
