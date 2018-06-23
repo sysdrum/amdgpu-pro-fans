@@ -12,7 +12,7 @@ Name[en_US]=AMD Fan Control System
 Comment=AMD Fan control application for Linux
 Exec=${FULL_PATH}/./fanspeeddlg-promenu.sh
 Terminal=True
-Categories=System;X-GNOME-Utilities
+Categories=System;X-GNOME-Utilities;
 Type=Application
 Icon=system-run-symbolic
 EOS
