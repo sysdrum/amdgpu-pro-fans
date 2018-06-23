@@ -1,5 +1,5 @@
 #!/bin/bash
-mydir='pwd'
+mydir="'pwd'"
 HEIGHT=18
 WIDTH=40
 CHOICE_HEIGHT=4
