@@ -9,12 +9,12 @@ cat <<EOS > AMDFCS.desktop
 [Desktop Entry]
 Name=Amd FCS
 Name[en_US]=AMD Fan Control System
-Comment=Notion.so Desktop application for Linux
+Comment=AMD Fan control application for Linux
 Exec="${FULL_PATH}./fanspeeddlg-promenu.sh"
 Terminal=True
 Categories=System;X-GNOME-Utilities
 Type=Application
-Icon=system-run-symblic
+Icon=system-run-symbolic
 EOS
 chmod +x AMDFCS.desktop
 ## This can be updated if this path is not valid. 
