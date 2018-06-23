@@ -10,7 +10,7 @@ cat <<EOS > AMDFCS.desktop
 Name=Amd FCS
 Name[en_US]=AMD Fan Control System
 Comment=AMD Fan control application for Linux
-Exec=${FULL_PATH}./fanspeeddlg-promenu.sh
+Exec=${FULL_PATH}/./fanspeeddlg-promenu.sh
 Terminal=True
 Categories=System;X-GNOME-Utilities
 Type=Application
