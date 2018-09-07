@@ -2,14 +2,15 @@
 HEIGHT=18
 WIDTH=40
 CHOICE_HEIGHT=4
-BACKTITLE="Amd settings for fan speed"
-TITLE="Amd Gpu Fan Speed"
+BACKTITLE="AMD settings for fan speed"
+TITLE="AMD GPU Fan Speed"
 MENU="Please enter your choice:"
 
-OPTIONS=(1 "Set 40"
-	 2 "Set 60"
-	 3 "Set 80"
-	 4 "Set 100")
+OPTIONS=(1 "Check GPU Temp" 
+     2 "Set 40"
+	 3 "Set 60"
+	 4 "Set 80"
+	 5 "Set 100")
 
 CHOICE=$(dialog --clear \
                 --backtitle "$BACKTITLE" \
@@ -22,16 +23,18 @@ CHOICE=$(dialog --clear \
 clear
 case $CHOICE in
         1)
-            sh -c 'textexchange/./amdgpu-pro-fans.sh -s 40'
+            sh -c 'textexchange/./amdgpu-pro-fans.sh -t'
             ;;
 	2)
-            sh -c 'textexchange/./amdgpu-pro-fans.sh -s 60'
+            sh -c 'textexchange/./amdgpu-pro-fans.sh -s 40'
             ;;
 	3)
-            sh -c 'textexchange/./amdgpu-pro-fans.sh -s 80'
+            sh -c 'textexchange/./amdgpu-pro-fans.sh -s 60'
             ;;
 	4)
+            sh -c 'textexchange/./amdgpu-pro-fans.sh -s 80'
+            ;;
+	5)
             sh -c 'textexchange/./amdgpu-pro-fans.sh -s 100'
             ;;
-
 esac
