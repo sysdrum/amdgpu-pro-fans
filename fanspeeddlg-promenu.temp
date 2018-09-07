@@ -1,7 +1,7 @@
 #!/bin/bash
 HEIGHT=18
 WIDTH=40
-CHOICE_HEIGHT=4
+CHOICE_HEIGHT=5
 BACKTITLE="AMD settings for fan speed"
 TITLE="AMD GPU Fan Speed"
 MENU="Please enter your choice:"
@@ -24,6 +24,7 @@ clear
 case $CHOICE in
         1)
             sh -c 'textexchange/./amdgpu-pro-fans.sh -t'
+            sleep 5
             ;;
 	2)
             sh -c 'textexchange/./amdgpu-pro-fans.sh -s 40'
