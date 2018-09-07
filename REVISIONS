@@ -1,3 +1,12 @@
+Version 0.2.0
+
+	- Added current temperature readout [-t]
+	- Added current fan speed readout [-r]
+	- Expanded and enabled help switch [-h]
+	- Added Verbosity flag  [-v] 0= no verbosity. 1= verbose output. default 1.
+	- Typo fixes for $cardcount
+	- Updated README
+
 Version 0.1.9
 
     - Dialog Menu with presets
