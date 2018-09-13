@@ -2,8 +2,11 @@
 
 
 Original creator DominiLux  
+
 Project extended: Sysdrum
+
 New features: DarkJarris
+
 License: Apache Version 2.0
 
 This is now a beta release written in unix style bash script. It is a simple utility that allows you to set the fan speeds and check themals for AMD cards that supports both the AMDGPU open and AMD GPU PRO driver. 
