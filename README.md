@@ -1,18 +1,22 @@
-# amdgpu-pro-fans
+# amdgpu-simple-settings-tool
 
 
 Original creator DominiLux  
-Project extended: Sysdrum  
+
+Project extended: Sysdrum
+
+New features: DarkJarris
+
 License: Apache Version 2.0
 
-This was an alpha release written in unix style bash script. It is a simple utility that allows you to set the fan speeds for AMD cards that support use the AMD GPU PRO driver. 
+This is now a beta release written in unix style bash script. It is a simple utility that allows you to set the fan speeds and check themals for AMD cards that supports both the AMDGPU open and AMD GPU PRO driver. 
 
 ## Stable Branch
 The current master branch is the stable release. 
 
 ## Installation Instructions:
 * sudo apt-get install git
-* git clone https://github.com/sysdrum/amdgpu-pro-fans
+* git clone https://github.com/sysdrum/amdgpu-simple-settings-tool
 * cd amdgpu-pro-fans
 * Run ./create_desktop_file.sh
 * If you move amdgpu-pro-fans just Run the ./create_desktop_file again to update everything.
@@ -80,7 +84,7 @@ By using these features, it is possible to make a GUI front-end that can run thi
 
 
 ## Notes:
-Fully tested on Ubuntu 18.04 with AMDGPU-PRO proprietary Linux drivers. It is compatible with all Radeon R8 Series, R9 Series, and RX Series graphics cards.
+Fully tested on Ubuntu 18.04 with AMDGPU-PRO and AMDGPU open Linux drivers. It is compatible with all Radeon R8 Series, R9 Series, and RX Series graphics cards.
 
 
 ## Orignal project:

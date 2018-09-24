@@ -154,8 +154,8 @@ read_current_temperature ()
 			temp=$(head -1 "$workingdir"/temp1_input)
 			temp=$(( $temp/1000 ))
 			if [ $temp -gt 0 ] ; then
-				if [ "$verbosity" -eq 0 ] ; then echo "$temp" ; fi
-				if [ "$verbosity" -eq 1 ] ; then echo "Temperature on Card$cardcount is $temp%" ; fi
+				if [ "$verbosity" -eq 0 ] ; then echo "$temp C" ; fi
+				if [ "$verbosity" -eq 1 ] ; then echo "Temperature on Card$cardcount is $temp C" ; fi
 			else
 				if [ "$verbosity" -eq 0 ] ; then echo "-1" ; fi	
 				if [ "$verbosity" -eq 1 ] ; then echo "Error: Unable To Determine Card Temperature For Card$cardcount!" ; fi
