@@ -84,8 +84,6 @@ By using these features, it is possible to make a GUI front-end that can run thi
 
 
 ## Notes:
-Fully tested on Ubuntu 18.04.2 with AMDGPU-PRO and AMDGPU open Linux drivers. 
-
 <table class="table-condensed table-striped"><tbody><tr><td colspan="2">
 			<h3>AMD Product Family Compatibility</h3>
 			</td>
