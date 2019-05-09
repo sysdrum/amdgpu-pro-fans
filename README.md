@@ -84,7 +84,88 @@ By using these features, it is possible to make a GUI front-end that can run thi
 
 
 ## Notes:
-Fully tested on Ubuntu 18.04 with AMDGPU-PRO and AMDGPU open Linux drivers. It is compatible with all Radeon R8 Series, R9 Series, and RX Series graphics cards.
+<table class="table-condensed table-striped"><tbody><tr><td colspan="2">
+			<h3>AMD Product Family Compatibility</h3>
+			</td>
+		</tr><tr><td>
+			<p>AMD Radeon™ VII Graphics​</p>
+			</td>
+			<td>
+			<p>AMD Radeon™ Pro WX-series​</p>
+			</td>
+		</tr><tr><td>
+			<p>AMD Radeon™ RX Vega Series Graphics​</p>
+			</td>
+			<td>
+			<p>AMD Radeon™ Pro WX 9100​</p>
+			</td>
+		</tr><tr><td>
+			<p>AMD Radeon™ Vega Frontier Edition</p>
+			</td>
+			<td>
+			<p>AMD Radeon™ Pro WX 8200</p>
+			</td>
+		</tr><tr><td>
+			<p>AMD Radeon™ RX 550/560/570/580/590 Series Graphics</p>
+			</td>
+			<td>
+			<p>AMD FirePro™ W9100</p>
+			</td>
+		</tr><tr><td>
+			<p>AMD Radeon™ RX 460/470/480&nbsp;Graphics</p>
+			</td>
+			<td>
+			<p>AMD FirePro™ W8100​</p>
+			</td>
+		</tr><tr><td>
+			<p>AMD Radeon™ Pro Duo</p>
+			</td>
+			<td>
+			<p>​​AMD FirePro™ W7100</p>
+			</td>
+		</tr><tr><td>
+			<p>AMD Radeon™ R9 Fury/Fury X/Nano Graphics</p>
+			</td>
+			<td>
+			<p>AMD FirePro™ W5100</p>
+			</td>
+		</tr><tr><td>
+			<p>AMD Radeon™ R9 380/380X/390/390X Graphics</p>
+			</td>
+			<td>
+			<p>AMD FirePro™ W4300</p>
+			</td>
+		</tr><tr><td>
+			<p>AMD Radeon™ R9 285/290/290X Graphics</p>
+			</td>
+			<td>
+			<p>AMD FirePro™ W4100</p>
+			</td>
+		</tr><tr><td>
+			<p>AMD Radeon™ R7 240/250/250X/260/260X/350</p>
+			</td>
+			<td>
+			<p>AMD FirePro™ W2100​</p>
+			</td>
+		</tr><tr><td>
+			<p>AMD Radeon™ HD7700/7800/8500/8600</p>
+			</td>
+			<td>
+			<p>​AMD FirePro™ W600</p>
+			</td>
+		</tr><tr><td>
+			<p>​AMD Radeon™ R9 360 Graphics</p>
+			</td>
+			<td>
+			<p>AMD FirePro™ S-Series</p>
+			</td>
+		</tr><tr><td>
+			<p>​AMD Radeon™ R5 340</p>
+			</td>
+			<td>
+			<p>​​</p>
+			</td>
+		</tr></tbody></table>
 
 
 ## Orignal project:
