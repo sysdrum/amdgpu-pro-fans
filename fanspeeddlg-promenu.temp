@@ -1,16 +1,17 @@
 #!/bin/bash
 HEIGHT=18
 WIDTH=40
-CHOICE_HEIGHT=5
+CHOICE_HEIGHT=8
 BACKTITLE="AMD settings for fan speed"
 TITLE="AMD GPU Fan Speed"
 MENU="Please enter your choice:"
 
 OPTIONS=(1 "Check GPU Temp" 
-     2 "Set 40"
-	 3 "Set 60"
-	 4 "Set 80"
-	 5 "Set 100")
+         2 "Check FAN Speed"
+	 3 "Set 40"
+	 4 "Set 60"
+	 5 "Set 80"
+	 6 "Set 100")
 
 CHOICE=$(dialog --clear \
                 --backtitle "$BACKTITLE" \
@@ -27,15 +28,19 @@ case $CHOICE in
             sleep 5
             ;;
 	2)
-            sh -c 'textexchange/./amdgpu-pro-fans.sh -s 40'
+            sh -c 'textexchange/./amdgpu-pro-fans.sh -r'
+            sleep 5
             ;;
 	3)
-            sh -c 'textexchange/./amdgpu-pro-fans.sh -s 60'
+            sh -c 'textexchange/./amdgpu-pro-fans.sh -s 40'
             ;;
 	4)
-            sh -c 'textexchange/./amdgpu-pro-fans.sh -s 80'
+            sh -c 'textexchange/./amdgpu-pro-fans.sh -s 60'
             ;;
 	5)
-            sh -c 'textexchange/./amdgpu-pro-fans.sh -s 100'
+	    sh -c 'textexchange/./amdgpu-pro-fans.sh -s 80'
+            ;;
+	6)
+ 	    sh -c 'textexchange/./amdgpu-pro-fans.sh -s 100'
             ;;
 esac

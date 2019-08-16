@@ -18,6 +18,8 @@ Icon=system-run-symbolic
 EOS
 chmod +x AMDFCS.desktop
 ## This can be updated if this path is not valid. 
-cp -p AMDFCS.desktop ~/.local/share/applications
+## cp -p AMDFCS.desktop ~/.local/share/applications
+ENDPOINTDIR=~/.local/share/applications
+[ ! -d $ENDPOINTDIR ] && { cd ~/.local/share; mkdir applications; cd ${WORKING_DIR}; cp -p AMDFCS.desktop $ENDPOINTDIR; } || { cd ${WORKING_DIR}; cp -p AMDFCS.desktop $ENDPOINTDIR; }
 sed "s|textexchange|${FULL_PATH}|g" fanspeeddlg-promenu.temp > fanspeeddlg-promenu.sh
 chmod +x fanspeeddlg-promenu.sh
