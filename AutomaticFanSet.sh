@@ -3,11 +3,12 @@
 #AMDGPU-PRO LINUX UTILITIES SUITE#
 ######################################
 # Utility Name: AMDGPU-PRO-FANS-AUTO
-# Author: DarkJarris
+# Author: alcotronic
 # Version: 0.1.0
 # Version Name: Officium
-# https://github.com/sysdrum/amdgpu-pro-fans
+# https://github.com/alcotronic/amdgpu-pro-fans
 
+# Forked from DarkJarris
 # Forked from DominiLux
 
 # Licensed under the Apache License, Version 2.0 (the "License");
