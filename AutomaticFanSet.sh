@@ -37,19 +37,42 @@
 ############################
 # COMMAND PARSED VARIABLES #
 ############################
-MODIFIER=10
+MODIFIER=-5
 LOOPTIME=5
 
 
 while true; do
 	#Get the current termpature, strip out the trailing ºC
 	RESULT="$(bash amdgpu-pro-fans.sh -v 0 -t | sed 's/.$//')"
+    RPM="$(sudo cat /sys/class/drm/card0/device/hwmon/hwmon0/fan1_input)"
+    
+    if [ $RESULT -le 35 ] ; then
+        MODIFIER=-25
+    elif [ $RESULT -le 45 ] ; then
+        MODIFIER=-20
+    elif [ $RESULT -le 55 ] ; then
+        MODIFIER=-15
+    elif [ $RESULT -le 65 ] ; then
+        MODIFIER=-10
+    elif [ $RESULT -le 70 ] ; then
+        MODIFIER=-5
+    elif [ $RESULT -le 75 ] ; then
+        MODIFIER=0
+    else
+        MODIFIER=10    
+    fi
+    
 	speed=$(( RESULT + MODIFIER))
-	
-	# Put a ceiling on this, as we cant push 101% of fan speed
+
+	# Put a ceiling on this, as we don't it too slow and we cant push 101% of fan speed
+    if [ $speed -le 10 ] ; then
+	    speed=10
+	fi
 	if [ $speed -ge 100 ] ; then
 	speed=100
 	fi
+
+    echo "Temp: $RESULT°C Modifier: $MODIFIER Speed: $speed% RPM: $RPM"
 
 	# Fire the sript again, this time setting our modified temperature as the percentage we want to use
 	bash amdgpu-pro-fans.sh -s $speed
