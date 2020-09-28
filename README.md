@@ -33,6 +33,11 @@ The current master branch is the stable release.
 * You can edit fanspeeddlg-promenu.sh and update the ranges. 
 * At anytime you can run ./create_desktop_file.sh to reset the changes to default.
 
+## Automatic Control
+The bash file AutomaticFanSet.sh will lopp every 5 seconds, and get a amdgpu-pro-fans output of your current fans temperature, add a modifier, and feed it right back into amdgpu-pro-fans as a fan speed percentage.
+
+When run on startup, it will automatically raise and lower your fan speeds, even on GPUs where the automatic fan controller is not working.
+
 ## CLI Usages:
 
 sudo ./amdgpu-pro-fans.sh -s [speed 0 - 100]  
