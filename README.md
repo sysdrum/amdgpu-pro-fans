@@ -10,12 +10,10 @@ License: Apache Version 2.0
 This is now a beta release written in unix style bash script. It is a simple utility that allows you to set the fan speeds and check thermals for AMD cards that supports both the AMDGPU open and AMD GPU PRO driver. 
 
 ## Stable Branch
-
 The current master branch is the stable release.
-
 ##
 
-## Installation Instructions:
+### Installation Instructions:
 * See git install on linux instructions --> https://gist.github.com/derhuerst/1b15ff4652a867391f03#file-linux-md
 * git clone https://github.com/sysdrum/amdgpu-simple-settings-tool
 * cd amdgpu-simple-settings-tool
