@@ -13,7 +13,7 @@ This is now a beta release written in unix style bash script. It is a simple uti
 The current master branch is the stable release.
 
 
-### Installation Instructions:
+## Installation Instructions:
 * See git install on linux instructions --> https://gist.github.com/derhuerst/1b15ff4652a867391f03#file-linux-md
 * git clone https://github.com/sysdrum/amdgpu-simple-settings-tool
 * cd amdgpu-simple-settings-tool
