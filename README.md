@@ -86,7 +86,7 @@ There is a CLI based Menu for simple adjustments.
 * You can edit fanspeeddlg-promenu.sh and update the ranges. 
 * At anytime you can run ./create_desktop_file.sh to reset the changes to default.
 #### Dependencies: 
-* dialog - is required to for the menu to work.
+* dialog - is required for the menu to work.
 
 ## Notes:
 ### All Cards listed are known to work.
