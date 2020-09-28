@@ -1,4 +1,4 @@
-# AMDGPU-SIMPLE-SETTINGS-TOOL LINUX UTILITIES SUITE
+# AMDGPU-SST LINUX UTILITIES SUITE
 
 Current Devs: 
 * Sysdrum 
@@ -13,21 +13,20 @@ This is now a beta release written in unix style bash script. It is a simple uti
 The current master branch is the stable release.
 
 
-## Installation Instructions:
+### Installation Instructions:
 * See git install on linux instructions --> https://gist.github.com/derhuerst/1b15ff4652a867391f03#file-linux-md
 * git clone https://github.com/sysdrum/amdgpu-simple-settings-tool
-* cd amdgpu-pro-fans
-* Run ./create_desktop_file.sh
-* If you move amdgpu-pro-fans just Run the ./create_desktop_file again to update everything.
+* cd amdgpu-simple-settings-tool
+* Run `./create_desktop_file.sh`
+* If you move `AMDGPU-SST` just Run the `./create_desktop_file.sh` again to update everything.
 
 
-
-## Automatic Control
+##3 Automatic Control
 The bash file AutomaticFanSet.sh will lopp every 5 seconds, and get a amdgpu-pro-fans output of your current fans temperature, add a modifier, and feed it right back into amdgpu-pro-fans as a fan speed percentage.
 
 When run on startup, it will automatically raise and lower your fan speeds, even on GPUs where the automatic fan controller is not working.
 
-## CLI Usages:
+### CLI Usages:
 
 sudo ./amdgpu-pro-fans.sh -s [speed 0 - 100]  
 ./amdgpu-pro-fans.sh -t  
@@ -35,7 +34,7 @@ sudo ./amdgpu-pro-fans.sh -s [speed 0 - 100]
 ./amdgpu-pro-fans.sh -h  
 ./amdgpu-pro-fans.sh -v [0,1] (default 1)
 
-### Examples
+#### Examples
 sudo ./amdgpu-pro-fans.sh -s 80  
 This would set all of your fan speeds to 80 percent of their maximum speed.
 
@@ -80,17 +79,17 @@ By using these features, it is possible to make a GUI front-end that can run thi
 <br>
 There is a CLI based Menu for simple adjustments.
 
-## Adjusting the MENU Example:
+### Adjusting the MENU Example:
 * Menu has default settings of 40/60/80/100
 * ` | ./amdgpu-pro-fans.sh -s 80 | `
 * That would set all of your fan speeds to 80 percent of their maximum speed.
 * You can edit fanspeeddlg-promenu.sh and update the ranges. 
 * At anytime you can run ./create_desktop_file.sh to reset the changes to default.
-### Dependencies: 
+#### Dependencies: 
 * dialog - is required to for the menu to work.
 
 ## Notes:
-## All Cards listed are known to work.
+### All Cards listed are known to work.
 <table class="table-condensed table-striped"><tbody><tr><td colspan="2">
 			<h3>AMD Product Family Compatibility</h3>
 			</td>
@@ -175,7 +174,7 @@ There is a CLI based Menu for simple adjustments.
 		</tr></tbody></table>
 
 
-## Orignal project:
+#### Orignal project:
 Original creator DominiLux 
 https://github.com/DominiLux/amdgpu-pro-fans  
 Dev replaced the project with:  
