@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
 #####################################
-#AMDGPU-PRO LINUX UTILITIES SUITE#
+#AMDGPU-SIMPLE-SETTINGS-TOOL LINUX UTILITIES SUITE#
 ######################################
 # Utility Name: AMDGPU-PRO-FANS-AUTO
-# Author: alcotronic
-# Version: 0.1.0
-# Version Name: Officium
-# https://github.com/alcotronic/amdgpu-pro-fans
+# Author: Sysdrum
+# Version: 0.1.2
+# Version Name: Quantium
+# https://github.com/sysdrum/amdgpu-simple-settings-tool
 
-# Forked from DarkJarris
+# Merged from alcotronic
+# Merged from DarkJarris
 # Forked from DominiLux
 
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -31,7 +32,7 @@
 # We add a little extra on top, because we always want it cooler
 
 #####################################################################
-#								*** IMPORTANT ***									  #
+#								*** IMPORTANT ***					#
 # DO NOT MODIFY PAST THIS POINT IF YOU DONT KNOW WHAT YOUR DOING!!! # 
 #####################################################################
 
@@ -65,11 +66,15 @@ while true; do
     
 	speed=$(( RESULT + MODIFIER))
 
-	# Put a ceiling on this, as we don't it too slow and we cant push 101% of fan speed
-    if [ $speed -le 10 ] ; then
-	    speed=10
+	# Adjusted bottom for cards that fans stall below 15%.
+    
+    if [ $speed -le 15 ] ; then
+	    speed=15
 	fi
-	if [ $speed -ge 100 ] ; then
+    
+    # Maxium cap set as no card can have 101% fan speed.
+	
+    if [ $speed -ge 100 ] ; then
 	speed=100
 	fi
 
