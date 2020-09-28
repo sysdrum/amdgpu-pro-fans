@@ -1,11 +1,9 @@
-# amdgpu-simple-settings-tool
+# AMDGPU-SIMPLE-SETTINGS-TOOL LINUX UTILITIES SUITE
 
-
-Original creator DominiLux  
-
-Project extended: Sysdrum
-
-New features: DarkJarris
+Current Devs: 
+* Sysdrum 
+* DarkJarris
+* Alcotronic
 
 License: Apache Version 2.0
 
@@ -23,15 +21,6 @@ The current master branch is the stable release.
 * If you move amdgpu-pro-fans just Run the ./create_desktop_file again to update everything.
 
 
-## Dependencies: 
-* dialog - is required to for the menu to work.
-
-## Adjusting the MENU Example:
-* Menu has default settings of 40/60/80/100
-* | ./amdgpu-pro-fans.sh -s 80 | 
-* That would set all of your fan speeds to 80 percent of their maximum speed.
-* You can edit fanspeeddlg-promenu.sh and update the ranges. 
-* At anytime you can run ./create_desktop_file.sh to reset the changes to default.
 
 ## Automatic Control
 The bash file AutomaticFanSet.sh will lopp every 5 seconds, and get a amdgpu-pro-fans output of your current fans temperature, add a modifier, and feed it right back into amdgpu-pro-fans as a fan speed percentage.
@@ -86,8 +75,19 @@ $0: invalid option -- ' '
 $0: invalid option -- '-'  
 Temperature on Card0 is 51%
 
-By using these features, it is possible to make a GUI front-end that can run this script and interpret the answers. If writing a GUI, set verbosity to 0 on your calls to get simple answers back you can check against.
+By using these features, it is possible to make a GUI front-end that can run this script and interpret the answers. If writing a GUI, set verbosity to 0 on your calls to get simple answers back you can check against. 
+<br>
+<br>
+There is a CLI based Menu for simple adjustments.
 
+## Adjusting the MENU Example:
+* Menu has default settings of 40/60/80/100
+* ` | ./amdgpu-pro-fans.sh -s 80 | `
+* That would set all of your fan speeds to 80 percent of their maximum speed.
+* You can edit fanspeeddlg-promenu.sh and update the ranges. 
+* At anytime you can run ./create_desktop_file.sh to reset the changes to default.
+### Dependencies: 
+* dialog - is required to for the menu to work.
 
 ## Notes:
 ## All Cards listed are known to work.
@@ -176,6 +176,7 @@ By using these features, it is possible to make a GUI front-end that can run thi
 
 
 ## Orignal project:
+Original creator DominiLux 
 https://github.com/DominiLux/amdgpu-pro-fans  
 Dev replaced the project with:  
 https://github.com/DominiLux/GPUMAGIC
