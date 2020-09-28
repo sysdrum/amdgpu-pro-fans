@@ -7,7 +7,7 @@ Current Devs:
 
 License: Apache Version 2.0
 
-This is now a beta release written in unix style bash script. It is a simple utility that allows you to set the fan speeds and check thermals for AMD cards that supports both the AMDGPU open and AMD GPU PRO driver. 
+This utility suite allows you to fine tune your fan curve and check thermals for AMD cards that support both the AMDGPU Open and AMD GPU PRO driver. 
 
 ## Stable Branch
 The current master branch is the stable release.
