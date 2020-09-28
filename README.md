@@ -10,8 +10,10 @@ License: Apache Version 2.0
 This is now a beta release written in unix style bash script. It is a simple utility that allows you to set the fan speeds and check thermals for AMD cards that supports both the AMDGPU open and AMD GPU PRO driver. 
 
 ## Stable Branch
+
 The current master branch is the stable release.
 
+##
 
 ## Installation Instructions:
 * See git install on linux instructions --> https://gist.github.com/derhuerst/1b15ff4652a867391f03#file-linux-md
@@ -21,7 +23,7 @@ The current master branch is the stable release.
 * If you move `AMDGPU-SST` just Run the `./create_desktop_file.sh` again to update everything.
 
 
-##3 Automatic Control
+### Automatic Control
 The bash file AutomaticFanSet.sh will lopp every 5 seconds, and get a amdgpu-pro-fans output of your current fans temperature, add a modifier, and feed it right back into amdgpu-pro-fans as a fan speed percentage.
 
 When run on startup, it will automatically raise and lower your fan speeds, even on GPUs where the automatic fan controller is not working.
