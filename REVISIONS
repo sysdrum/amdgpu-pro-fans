@@ -1,3 +1,8 @@
+Version 0.2.1
+
+    - Automatic Fan Set now included
+    - Should be fully supported with latest AMDGPU-PRO driver on Ubuntu 20.04
+    
 Version 0.2.0
 
 	- Added current temperature readout [-t]
