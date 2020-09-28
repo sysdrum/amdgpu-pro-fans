@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 #####################################
-#AMDGPU-PRO LINUX UTILITIES SUITE#
+#AMDGPU-SIMPLE-SETTINGS-TOOL LINUX UTILITIES SUITE#
 ######################################
 # Utility Name: AMDGPU-PRO-FANS-AUTO
-# Author: DarkJarris
-# Version: 0.1.0
-# Version Name: Officium
-# https://github.com/sysdrum/amdgpu-pro-fans
+# Author: Sysdrum
+# Version: 0.1.2
+# Version Name: Quantium
+# https://github.com/sysdrum/amdgpu-simple-settings-tool
 
+# Merged from alcotronic
+# Merged from DarkJarris
 # Forked from DominiLux
 
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -30,26 +32,53 @@
 # We add a little extra on top, because we always want it cooler
 
 #####################################################################
-#								*** IMPORTANT ***									  #
+#								*** IMPORTANT ***					#
 # DO NOT MODIFY PAST THIS POINT IF YOU DONT KNOW WHAT YOUR DOING!!! # 
 #####################################################################
 
 ############################
 # COMMAND PARSED VARIABLES #
 ############################
-MODIFIER=10
+MODIFIER=-5
 LOOPTIME=5
 
 
 while true; do
 	#Get the current termpature, strip out the trailing ºC
 	RESULT="$(bash amdgpu-pro-fans.sh -v 0 -t | sed 's/.$//')"
+    RPM="$(sudo cat /sys/class/drm/card0/device/hwmon/hwmon0/fan1_input)"
+    
+    if [ $RESULT -le 35 ] ; then
+        MODIFIER=-25
+    elif [ $RESULT -le 45 ] ; then
+        MODIFIER=-20
+    elif [ $RESULT -le 55 ] ; then
+        MODIFIER=-15
+    elif [ $RESULT -le 65 ] ; then
+        MODIFIER=-10
+    elif [ $RESULT -le 70 ] ; then
+        MODIFIER=-5
+    elif [ $RESULT -le 75 ] ; then
+        MODIFIER=0
+    else
+        MODIFIER=10    
+    fi
+    
 	speed=$(( RESULT + MODIFIER))
+
+	# Adjusted bottom for cards that fans stall below 15%.
+    
+    if [ $speed -le 15 ] ; then
+	    speed=15
+	fi
+    
+    # Maxium cap set as no card can have 101% fan speed.
 	
-	# Put a ceiling on this, as we cant push 101% of fan speed
-	if [ $speed -ge 100 ] ; then
+    if [ $speed -ge 100 ] ; then
 	speed=100
 	fi
+
+    echo "Temp: $RESULT°C Modifier: $MODIFIER Speed: $speed% RPM: $RPM"
 
 	# Fire the sript again, this time setting our modified temperature as the percentage we want to use
 	bash amdgpu-pro-fans.sh -s $speed
